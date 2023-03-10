@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.accordion{
+    max-width:50%;
+    margin:2% auto;
+    background-color:#FFFACD;
+}
+.mem{
+    width:50%;
+    display: none;
+    margin-bottom: 0.8em;
+}
+.accordion-title{
+    display: block;
+    font-size: 1.5em;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 0.3em;
+    padding-top: 0.3em;
+}
+.accordion-item{
+    border-bottom: 0.1em solid rgb(183, 183, 183);
+    max-width:70%;
+    margin:auto;
+}
+.accordion-input{
+    width: 0;
+    height:0;
+    appearance: none;
+    position: absolute;
+}
