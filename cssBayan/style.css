@@ -11,10 +11,14 @@ body{
     margin:2% auto;
     background-color:#FFFACD;
 }
-.mem{
-    width:50%;
+.accordion-mem{
     display: none;
-    margin-bottom: 0.8em;
+}
+.mem{
+    max-width:70%;
+    margin-left: 15%;
+    margin-top: 0.3em;
+    margin-bottom: 1.3em;
 }
 .accordion-title{
     display: block;
@@ -26,7 +30,7 @@ body{
 }
 .accordion-item{
     border-bottom: 0.1em solid rgb(183, 183, 183);
-    max-width:70%;
+    max-width:85%;
     margin:auto;
 }
 .accordion-input{
@@ -34,4 +38,7 @@ body{
     height:0;
     appearance: none;
     position: absolute;
+}
+.accordion-input:checked + .accordion-mem{
+    display:block;
 }
