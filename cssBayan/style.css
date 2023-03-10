@@ -4,41 +4,73 @@
 }
 body{
     box-sizing: border-box;
+    background-color:#BFD7ED;
     font-family: 'Montserrat', sans-serif;
 }
 .accordion{
-    max-width:50%;
+    max-width:40%;
     margin:2% auto;
-    background-color:#FFFACD;
+    cursor: pointer;
 }
 .accordion-mem{
-    display: none;
+    width: 0;
+    height:0;
 }
 .mem{
-    max-width:70%;
-    margin-left: 15%;
+    max-width:55%;
+    margin-left: 22%;
     margin-top: 0.3em;
-    margin-bottom: 1.3em;
+    margin-bottom: 1.5em;
 }
 .accordion-title{
-    display: block;
+    color:#60A3D9;
     font-size: 1.5em;
     font-weight: 700;
-    cursor: pointer;
     margin-bottom: 0.3em;
-    padding-top: 0.3em;
+    cursor: pointer;
 }
+.accordion-title:hover + .accordion-mem{
+    height:100%;
+    width:100%;
+    transition: 1.2s;
+}
+.accordion-title:hover .plus{
+    transform: rotate(45deg);
+    opacity:1;
+    transition: 1.2s;
+}
+
+.plus{
+    opacity:0;
+    margin-top: -1.25em;
+    margin-left: 95%;   
+}
+.accordion-title:hover{
+    color: #0074B7;
+    transition: 1.2s;
+}
+
+h2{
+    font-size: 2em;
+    max-width:85%;
+    margin:auto; 
+}
+
 .accordion-item{
-    border-bottom: 0.1em solid rgb(183, 183, 183);
+    border-bottom: 0.1em solid #0074B7;
     max-width:85%;
     margin:auto;
 }
 .accordion-input{
     width: 0;
     height:0;
-    appearance: none;
-    position: absolute;
 }
-.accordion-input:checked + .accordion-mem{
-    display:block;
+.accordion-input:checked ~ .accordion-mem{
+    height:100%;
+    width:100%;
+    transition: 1.2s;
+}
+.accordion-input:checked ~ .accordion-title{
+    color: #0074B7;
+    transition: 1.2s;
 }
