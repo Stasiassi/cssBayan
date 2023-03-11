@@ -8,7 +8,7 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 .accordion{
-    max-width:40%;
+    max-width:50%;
     margin:2% auto;
     cursor: pointer;
 }
@@ -22,13 +22,13 @@ body{
     max-width:55%;
     margin-left: 22%;
     margin-top: 0.3em;
-    margin-bottom: 1.2em;
+    margin-bottom: 0.7em;
 }
 .accordion-title{
     color:#60A3D9;
-    font-size: 1.5em;
+    font-size: 2.5em;
     font-weight: 700;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.5em;
     cursor: pointer;
 }
 .accordion-item:hover > * .accordion-mem{
@@ -57,10 +57,9 @@ body{
     transition: 1.2s;
 }
 
-
 .plus{
     opacity: 0;
-    margin-top: -1.25em;
+    margin-top: -1.3em;
     margin-left: 95%;   
 }
 .accordion-title:hover{
@@ -69,12 +68,14 @@ body{
 }
 
 h2{
-    font-size: 2em;
+    font-size: 3em;
     margin-bottom: 2%;
 }
 
 .accordion-item{
     border-bottom: 0.1em solid #0074B7;
+    margin-bottom: 1%;
+    padding-bottom: 1%;
 }
 .accordion-input{
     width: 0;
