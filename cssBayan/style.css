@@ -13,14 +13,16 @@ body{
     cursor: pointer;
 }
 .accordion-mem{
-    width: 0;
     height:0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 1.2s;
 }
 .mem{
     max-width:55%;
     margin-left: 22%;
     margin-top: 0.3em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.2em;
 }
 .accordion-title{
     color:#60A3D9;
@@ -29,20 +31,27 @@ body{
     margin-bottom: 0.3em;
     cursor: pointer;
 }
-.accordion-title:hover + .accordion-mem{
+.accordion-item:hover > .accordion-mem{
     height:100%;
-    width:100%;
+    overflow: visible;
+    opacity: 1;
     transition: 1.2s;
 }
-.acc:hover > * .plus{
-    opacity:1;
+.accordion-item:hover > .accordion-title{
+    color: #0074B7;
     transition: 1.2s;
 }
-.accordion-title:hover .plus{
+.accordion-item:hover > * .plus{
     transform: rotate(45deg);
     opacity:1;
     transition: 1.2s;
 }
+
+.acc:hover > * .plus{
+    opacity:1;
+    transition: 1.2s;
+}
+
 
 .plus{
     opacity: 0;
@@ -62,6 +71,7 @@ h2{
 .accordion-item{
     border-bottom: 0.1em solid #0074B7;
     
+    
 }
 .accordion-input{
     width: 0;
@@ -69,7 +79,8 @@ h2{
 }
 .accordion-input:checked ~ .accordion-mem{
     height:100%;
-    width:100%;
+    overflow: visible;
+    opacity: 1;
     transition: 1.2s;
 }
 .accordion-input:checked ~ .accordion-title{
